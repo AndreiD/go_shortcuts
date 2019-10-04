@@ -1,7 +1,7 @@
 # Go Shortcuts
 
-## a collection of go utilities for you to copy paste
+## a collection of stuff for me to copy paste
 
-..... Fell free to add your own
+••••••
 
 ### Copyright: MIT
