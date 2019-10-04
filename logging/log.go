@@ -6,8 +6,17 @@ import (
 
 var logger *StandardLogger
 
-func init() {
+// Init ...
+func Init(debug bool) {
 	logger = NewLogger()
+
+	if debug {
+		logger.SetLevel(logrus.InfoLevel)
+		return
+	} else {
+		logger.SetLevel(logrus.WarnLevel)
+	}
+
 }
 
 // Event stores messages to log later, from our standard interface
