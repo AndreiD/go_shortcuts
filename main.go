@@ -17,17 +17,16 @@ const version = "0.0.1 Gasoline"
 var configuration *configs.ViperConfiguration
 
 func init() {
-	log.Info("•••••••••••••••••••••••")
-	log.Info("MY APP Starting.... version: " + version)
-	log.Info("••••••••••••••••••••••••")
 
 	configuration = configs.NewConfiguration()
 	configuration.Init()
 
 	debug := configuration.GetBool("debug")
-	if debug {
-		log.Println("Running in debug mode")
-	}
+	log.Init(debug)
+
+	log.Info("----------------------------------------------")
+	log.Info("XXXXXXx Starting.... version: " + version)
+	log.Info("----------------------------------------------")
 
 }
 
